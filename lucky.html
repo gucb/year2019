@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="renderer" content="webkit|ie-comp|ie-stand">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+  <meta content="telephone=no" name="format-detection">
+  <meta content="email=no" name="format-detection">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+  <link rel="stylesheet" type="text/css" href="css/lucky.css"/>
+  <title>幸运大抽奖</title>
+</head>
+<body>
+<div class="wrapper">
+  <!--背景和控制按钮部分-->
+  <div class="groupbtn">
+    <button type="button" class="js-current">0</button>
+    <button type="button" class="js-current">1</button>
+    <button type="button" class="js-current">2</button>
+    <button type="button" class="js-current">3</button>
+    <button type="button" class="js-start">s</button>
+    <button type="button" class="js-stop">e</button>
+    <button type="button" class="js-status">e</button>
+  </div>
+  <div class="pennants"></div>
+  <div class="imgbg lantern"></div>
+  <div class="imgbg lantern2"></div>
+  <div class="imgbg main"></div>
+
+  <!--抽奖滚动部分start-->
+  <ul class="scoll js-scoll"></ul>
+  <!--抽奖滚动部分end-->
+
+  <!--显示所有中奖者名单start-->
+  <div class="aller aller-left js-aller_left"></div>
+  <div class="aller aller-right js-aller_right"></div>
+  <!--显示所有中奖者名单end-->
+
+  <!--礼品部分-->
+  <div class="imgbg gift js-winner_show">
+    <dl>
+      <dt class="imgbg">
+        <h2></h2>
+        <p></p>
+      </dt>
+      <dd class="winner_0 "></dd>
+      <dd class="winner_1"></dd>
+      <dd class="winner_2"></dd>
+      <dd class="winner_3"></dd>
+    </dl>
+  </div>
+</div>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/lucky.js"></script>
+</body>
+</html>

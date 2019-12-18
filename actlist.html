@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="renderer" content="webkit|ie-comp|ie-stand">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+  <meta content="telephone=no" name="format-detection">
+  <meta content="email=no" name="format-detection">
+  <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+  <link rel="stylesheet" type="text/css" href="css/index.css"/>
+  <link rel="shortcut icon" href="favicon.ico">
+  <title>创蓝2019节目列表</title>
+</head>
+<body>
+<h1 class="title">创蓝2019节目列表</h1>
+<table class="table">
+  <thead>
+  <tr>
+    <th>序号</th>
+    <th>节目名称</th>
+    <th>部门</th>
+    <th>负责人</th>
+    <th>投票数</th>
+  </tr>
+  </thead>
+  <tbody id="J-tbody"></tbody>
+</table>
+<script src="js/jquery.min.js"></script>
+<script>
+  function getList() {
+    $.ajax({
+      url: '/api/actlist',
+      type: 'get',
+      dataType: 'json',
+    })
+      .done(function (res) {
+        if (res.status == "success") {
+          let html = '';
+          if (res.list.length > 0) {
+            for (var i = 0; i < res.list.length; i++) {
+              html+='<tr><td>'+res.list[i].order+'</td><td>'+res.list[i].name+'</td><td>'+res.list[i].depart+'</td>';
+              html+='<td>'+res.list[i].leader+'</td><td>'+res.list[i].numb+'</td></tr>'
+            }
+          } else {
+            html = '<tr><td colspan="4">查询的数据为空</td></tr>'
+          }
+          $('#J-tbody').html(html);
+        } else {
+          alert('数据请求失败请联系波波')
+        }
+      });
+  }
+  getList();
+</script>
+</body>
+</html>

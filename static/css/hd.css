@@ -1,0 +1,31 @@
+.wrap{ height: 100vh; width: 100%; background-image: url("../images/hdbg.png"); background-position: center top; background-size:cover; background-repeat: no-repeat;}
+.dm_sm{ z-index: 1; color: #f5c696; font-size: 0.42rem; line-height: 0.6rem; margin: 0 auto;width:11rem; background: rgba(146,5,6,0.5); top: 3rem; position: absolute; left:4rem; border:0.03rem solid #9c090a; border-radius:0.1rem; padding:0.2rem;}
+.dm{ width: 100%; height: 100%; overflow: hidden; position: relative; z-index: 1000; top: 0; left: 0;}
+.dmitem{ position: absolute; max-width: 6rem;}
+.item_info{ position: relative}
+.item_info img{ width: 0.8rem; height: 0.8rem; border:3px solid #fae6cd; border-radius: 50%; position: absolute; background: #fae6cd; left: -0.1rem; top:-0.1rem;}
+.item_info p{ border:3px solid #fae6cd; border-radius: 0.4rem; background: rgba(153,14,33,0.7); color:#fae6cd; padding:0.1rem 0.2rem; text-align: left; font-size: 0.3rem; font-weight: bold; text-indent: 0.6rem; width: 100%;}
+
+.wrap_m{ height:9.6rem; width: 100%; background-image: url("../images/hd_m.png"); background-position: center top; background-size:cover; background-repeat: no-repeat; position: relative; overflow: hidden; background-color: #d92223;}
+.edit{ width: 100%; height:3.16rem; background-image: url("../images/edit.png"); background-size: 100% auto; background-repeat: no-repeat; position:fixed; left: 0; bottom:-0.3rem; box-sizing: border-box; padding:1.4rem 0.33rem 0 0.33rem; z-index: 1000;}
+.edit form{ display: flex; width: 100%; }
+.edit form .sub_btn{ width: 0.8rem; height: 0.8rem; outline: none; background:#fab564; color: #fff; border:none; font-size: 0.26rem;}
+.edit form .edit_input{ flex: 1; border:1px solid #fab564; padding:0.1rem; font-size: 0.26rem; outline: none}
+.edit form .sub_btn:active{ background: #eb9938;}
+.edit_content{ width: 100%; z-index: 900; box-sizing: border-box;position: absolute; bottom: 2.9rem; top: 0.82rem; }
+.edit_cont{ width: 100%; height: 100%; overflow: auto; position: relative;}
+.edit_cont .content{ position: absolute; bottom: 0; min-height: 100%; width: 100%; padding:0 0.33rem ;}
+.edit_cont li{ display: flex; width: 100%; margin: 0.15rem 0;}
+.edit_cont .head{ width: 0.75rem; height: 0.75rem;}
+.edit_cont .head img{ width: 100%; height: 100%; border-radius: 3px; background: #fff; border:1px solid #fff;}
+.edit_cont .cont_info{ flex: 1; padding-left:0.25rem;}
+.edit_cont .cont_info .name{ font-size: 0.12rem; color: #9aa2b4; font-weight: 600; position: relative;}
+.edit_cont .cont_info .name span{ font-weight: normal; margin-left: 0.1rem;}
+.detail{ width: 100%; background:rgba(255,255,255,1); border-radius: 8px; padding: 0.15rem; padding-top: 0.05rem; min-height: 0.75rem; position: relative; }
+.detail .info{ color:#465b68; font-size: 0.22rem; font-weight: bold; padding-top: 0.02rem;}
+.detail:before{ content:' '; display: block; width: 0; height: 0; border-top:0.1rem solid transparent; border-bottom:0.1rem solid transparent; border-right:0.2rem solid #fff; position: absolute; z-index: 10; left:-0.15rem; top: 0.08rem; }
+.edit_cont li.my .name{ text-align: right;}
+.edit_cont li.my .cont_info{ text-align: right; padding-right:0.25rem; padding-left: 0;}
+.edit_cont li.my .detail:before{ left: auto; right: -0.15rem; border-right: none; border-left:0.2rem solid #fff;}
+.online { text-align: center; display: block !important;}
+.online p{ display: inline-block; padding:0.02rem 0.2rem; background: rgba(252,195,128,0.6); font-size: 0.12rem; border-radius: 0.8rem; color: #683800;}

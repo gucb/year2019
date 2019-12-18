@@ -1,0 +1,37 @@
+{
+  "name": "year2019",
+  "version": "1.0.0",
+  "description": "2019年年会相关活动",
+  "scripts": {
+    "start": "nodemon app.js",
+    "exportdb": "mongoexport -d year2019 -c acts -o /work/gs/chuangxin/year2019/data/acts.json --type=json && mongoexport -d year2019 -c configs -o /work/gs/chuangxin/year2019/data/configs.json --type=json",
+    "importdb": "mongoimport -d year2019 -c acts --type=json --file /work/gs/chuangxin/year2019/data/acts.json --upsert && mongoimport -d year2019 -c acts --type=json --file /work/gs/chuangxin/year2019/data/configs.json --upsert"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.253.com:gucb/year2019.git"
+  },
+  "author": "bobo",
+  "license": "ISC",
+  "devDependencies": {
+    "ejs": "^2.6.1",
+    "koa": "^2.6.2",
+    "koa-body": "^4.0.6",
+    "koa-compose": "^4.1.0",
+    "koa-cors": "^0.0.16",
+    "koa-router": "^7.4.0",
+    "koa-session": "^5.10.1",
+    "koa-static": "^5.0.0",
+    "log4js": "^3.0.6",
+    "mongoose": "^5.4.3",
+    "mongoose-paginate": "^5.0.3",
+    "node-xlsx": "^0.12.1",
+    "nodemon": "^1.18.9",
+    "raw-body": "^2.3.3",
+    "xml2js": "^0.4.19"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "socket.io": "^2.2.0"
+  }
+}
